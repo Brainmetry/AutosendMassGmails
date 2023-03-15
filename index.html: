@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mass Email Sender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mass Email Sender</h1>
+  <form>
+    <label for="recipients">Recipients:</label>
+    <input type="text" id="recipients" name="recipients">
+    <br>
+    <label for="senderName">Sender Name:</label>
+    <input type="text" id="senderName" name="senderName">
+    <br>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject">
+    <br>
+    <label for="body">Body:</label>
+    <textarea id="body" name="body"></textarea>
+    <br>
+    <label for="sendingInterval">Sending Interval:</label>
+    <input type="number" id="sendingInterval" name="sendingInterval" value="1000">
+    <br>
+    <label for="sendMaxLimit">Send Max Limit:</label>
+    <input type="number" id="sendMaxLimit" name="sendMaxLimit" value="50">
+    <br>
+    <input type="checkbox" id="deliveryReport" name="deliveryReport" checked>
+    <label for="deliveryReport">Delivery Report</label>
+    <br>
+    <input type="checkbox" id="deliveryConfirmation" name="deliveryConfirmation" checked>
+    <label for="deliveryConfirmation">Delivery Confirmation</label>
+    <br>
+    <button type="button" onclick="sendMassEmails()">Send Emails</button>
+  </form>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
